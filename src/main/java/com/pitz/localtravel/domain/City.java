@@ -13,13 +13,12 @@ public class City extends BaseEntityAudit {
     // I'm ignoring the fact that should be another domain //
     private String country;
 
-    private String postalCode;
+    public City() {}
 
-    public City(String name, String uf, String country, String postalCode) {
+    public City(String name, String uf, String country) {
         this.name = name;
         this.uf = uf;
         this.country = country;
-        this.postalCode = postalCode;
     }
 
     public String getName() {
@@ -46,14 +45,6 @@ public class City extends BaseEntityAudit {
         this.country = country;
     }
 
-    public String getPostalCode() {
-        return postalCode;
-    }
-
-    public void setPostalCode(String postalCode) {
-        this.postalCode = postalCode;
-    }
-
     @Override
     public String toString() {
         return "City{" +
@@ -61,7 +52,6 @@ public class City extends BaseEntityAudit {
                 "name='" + name + '\'' +
                 ", uf='" + uf + '\'' +
                 ", country='" + country + '\'' +
-                ", postalCode='" + postalCode + '\'' +
                 '}';
     }
 }

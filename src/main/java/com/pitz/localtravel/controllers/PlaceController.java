@@ -1,6 +1,6 @@
 package com.pitz.localtravel.controllers;
 
-import com.pitz.localtravel.domain.Place;
+import com.pitz.localtravel.dto.place.PlaceDetailsDTO;
 import com.pitz.localtravel.dto.place.SavePlaceDTO;
 import com.pitz.localtravel.service.PlaceService;
 
@@ -21,7 +21,7 @@ public class PlaceController {
     }
 
     @GetMapping("/list")
-    public List<Place> list() {
+    public List<PlaceDetailsDTO> list() {
         return placeService.list();
     }
 

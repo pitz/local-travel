@@ -17,9 +17,17 @@ public class Place extends BaseEntityAudit {
         this.city = city;
     }
 
+    public String getName() {
+        return this.name;
+    }
+
+    public City getCity() {
+        return this.city;
+    }
+
     @Override
     public String toString() {
-        return "Student{" +
+        return "Place{" +
                 "id=" + this.getId() +
                 ", name='" + this.name + '\'' +
                 ", city='" + this.city + '\'' +

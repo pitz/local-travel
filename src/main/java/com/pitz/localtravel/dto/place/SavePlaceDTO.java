@@ -1,10 +1,12 @@
 package com.pitz.localtravel.dto.place;
 
+import com.pitz.localtravel.dto.city.SaveCityDTO;
+
 public class SavePlaceDTO {
 
     private String name;
 
-    private CityDTO city;
+    private SaveCityDTO city;
 
     public String getName() {
         return name;
@@ -14,11 +16,11 @@ public class SavePlaceDTO {
         this.name = name;
     }
 
-    public CityDTO getCity() {
+    public SaveCityDTO getCity() {
         return city;
     }
 
-    public void setCity(CityDTO city) {
+    public void setCity(SaveCityDTO city) {
         this.city = city;
     }
 }

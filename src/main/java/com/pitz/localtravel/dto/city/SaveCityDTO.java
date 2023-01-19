@@ -1,6 +1,6 @@
-package com.pitz.localtravel.dto.place;
+package com.pitz.localtravel.dto.city;
 
-public class CityDTO {
+public class SaveCityDTO {
 
     private String name;
 
