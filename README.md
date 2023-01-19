@@ -11,3 +11,6 @@ Back to the basics with Java and OOP. After a while without coding with Java and
 
 ## Postgres.app
 Postgres.app is a full-featured PostgreSQL installation packaged as a standard Mac app. It includes everything you need to get started, and we’ve even included the popular extension PostGIS for geo data.
+
+#### Commands
+- List tables: `\dt`
