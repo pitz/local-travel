@@ -12,6 +12,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
 @Service
@@ -46,5 +47,8 @@ public class PlaceServiceImpl implements PlaceService {
 
     private void validateSave(SavePlaceDTO placeDTO) {
         if (placeDTO.getName().isBlank()) throw new IllegalStateException("Please, inform a Name for your place.");
+
+        Predicate<String> isNameTooShort = (String name) -> { return name.length() <= Place.NAME_MIN_LENGTH; };
+        if (isNameTooShort.test(placeDTO.getName())) throw new IllegalStateException("The informed Name is too short.");
     }
 }

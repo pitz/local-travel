@@ -1,13 +1,19 @@
 package com.pitz.localtravel.domain;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
-@Entity
-@Table
+@Entity @Table @ToString
 public class Place extends BaseEntityAudit {
 
+    public static int NAME_MIN_LENGTH = 3;
+
+    @Getter @Setter
     private String name;
 
+    @Getter @Setter
     private City city;
 
     public Place() {}
@@ -15,22 +21,5 @@ public class Place extends BaseEntityAudit {
     public Place(String name, City city) {
         this.name = name;
         this.city = city;
-    }
-
-    public String getName() {
-        return this.name;
-    }
-
-    public City getCity() {
-        return this.city;
-    }
-
-    @Override
-    public String toString() {
-        return "Place{" +
-                "id=" + this.getId() +
-                ", name='" + this.name + '\'' +
-                ", city='" + this.city + '\'' +
-                '}';
     }
 }
