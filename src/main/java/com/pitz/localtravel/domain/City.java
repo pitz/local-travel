@@ -10,7 +10,7 @@ public class City extends BaseEntityAudit {
 
     private String uf;
 
-    // I'm ignoring the fact that should be another domain //
+    // I'm ignoring the fact that could be another domain //
     private String country;
 
     public City() {}

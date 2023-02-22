@@ -2,25 +2,15 @@ package com.pitz.localtravel.dto.place;
 
 import com.pitz.localtravel.dto.city.SaveCityDTO;
 
+import lombok.Getter;
+import lombok.Setter;
+
 public class SavePlaceDTO {
 
+    @Getter @Setter
     private String name;
 
+    @Getter @Setter
     private SaveCityDTO city;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public SaveCityDTO getCity() {
-        return city;
-    }
-
-    public void setCity(SaveCityDTO city) {
-        this.city = city;
-    }
 }

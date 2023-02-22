@@ -1,35 +1,22 @@
 package com.pitz.localtravel.domain;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
 
 import java.io.Serializable;
 import java.util.Objects;
 
 @MappedSuperclass
+@ToString
 public abstract class BaseEntity implements Serializable {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Id @Getter @Setter @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    @Version
+    @Version @Getter @Setter
     private Long version;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Long getVersion() {
-        return version;
-    }
-
-    public void setVersion(Long version) {
-        this.version = version;
-    }
 
     @Override
     public boolean equals(Object o) {
@@ -43,14 +30,6 @@ public abstract class BaseEntity implements Serializable {
     @Override
     public int hashCode() {
         return Objects.hash(id, version);
-    }
-
-    @Override
-    public String toString() {
-        return "BaseEntity{" +
-                "id=" + id +
-                ", version=" + version +
-                '}';
     }
 }
 

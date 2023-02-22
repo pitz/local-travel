@@ -1,34 +1,17 @@
 package com.pitz.localtravel.dto.city;
 
+import lombok.Getter;
+import lombok.Setter;
+
 public class SaveCityDTO {
 
+    @Getter @Setter
     private String name;
 
+    @Getter @Setter
     private String uf;
 
+    @Getter @Setter
     private String country;
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getUf() {
-        return uf;
-    }
-
-    public void setUf(String uf) {
-        this.uf = uf;
-    }
-
-    public String getCountry() {
-        return country;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
-    }
 }
